@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Practice Suite" parallel="tests" thread-count="3" verbose="4">
+	<test name="Google Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www.google.com" />
+		<parameter name="headless" value="true" />
+
+		<classes>
+			<class name="myTests.googleTest" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="Open cart Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://demo.opencart.com/index.php?route=account/register" />
+		<parameter name="headless" value="true" />
+
+		<classes>
+			<class name="myTests.OpenCartAppTest" />
+		</classes>
+
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
